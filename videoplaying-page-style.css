@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    background-color:#0f0f0f;
+}
+
+
+
+/* ----------------------------navbar------------------------------------- */
+
+.navbar{
+    height : 60px;
+    display: flex;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    z-index: 1000;
+    background-color:#0f0f0f;
+}
+
+.hamburgar{
+    margin-top: 0.5px;
+    margin-left: 24px;
+    width: 40px !important;
+    height: 40px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburgar:hover{
+    background-color: #929292;
+}
+
+.icon{
+    margin: 24px;
+}
+
+#icon{
+    fill: #fff;
+}
+
+.input-submit{
+    display: flex;
+    margin-left: 415px;
+    margin-top: -6px;
+}
+
+.text {
+    width: 540px;
+    height: 40px;
+    background-color: hsl(0, 0, 100%);
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 40px 0 0 40px;
+    box-shadow: inset 0 1px 2px #eee;
+    caret-color: var(--yt-spec-text-primary);
+    color: var(--ytd-searchbox-text-color);
+    padding: 0px 4px 0px 16px;
+    margin-left: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none ;
+}
+
+.text:focus{
+     border: 1px solid blue;
+}
+
+
+
+.search{
+    width: 64px;
+    height: 40px;
+    background-color: hsl(0, 0, 100%);
+    border: 1px solid #ccc;
+    border-radius: 0 40px 40px 0;
+    box-shadow: inset 0 1px 2px #eee;
+    caret-color: var(--yt-spec-text-primary);
+    color: var(--ytd-searchbox-text-color);
+    cursor: pointer;
+    
+}
+
+.search img {
+    width: 24px;
+}
+
+.mic{
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mic{
+    fill: #fff;
+    color: #fff;
+}
+
+.mic:hover{
+    background-color: #929292;
+    cursor: pointer;
+}
+
+.camera{
+    margin-left: 432px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera:hover{
+    background-color: #929292;
+    cursor: pointer;
+}
+
+.bell{
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bell:hover{
+    background-color: #929292;
+    cursor: pointer;
+}
+
+.user-icon img{
+    border-radius: 30px;
+}
+
+
+
+
+
+/* ---------------------------------------------main ------------------------------------------------*/
+
+
+.main{
+    margin-top: 80px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.channel-description{
+    font-size: 16px;
+    color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.channel-details-likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.channel-details-likes p{
+    margin-right: 10px;
+}
+
+.desc{
+    margin-bottom: 10px;
+}
+
+
+/* .left-section{
+
+}
+
+
+.video-section{
+
+}
+
+.below-video-section{
+} */
+
+.description{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #F1F1F1;
+}
+
+.details{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-all{
+    display: flex;
+    align-items: center;
+}
+
+.details img{
+    border-radius: 50%;
+}
+
+.channel-name-subscriber{
+    margin-left: 20px;
+}
+
+.channel-name-vpp{
+    font-size: 16px;
+    color: #F1F1F1;
+    margin-bottom: 5px;
+}
+
+.channel-subscriber-vpp{
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.join-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 60px;
+    border: 1px solid #3a3a3a;
+    margin-left: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #F1F1F1;
+    cursor: pointer;
+}
+
+.join-button:hover{
+    background-color: #3a3a3a;
+    
+}
+
+
+.subscribe-button{
+    height: 35px;
+    width: 95px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #0f0f0f;
+    background: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.subscribe-button:hover{
+    background-color: #eee;
+    
+}
+
+.right-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.like-button{
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    height: 35px;
+    border-radius: 25px 0 0 25px;
+    cursor: pointer;
+}
+
+.like-button:hover{
+    background-color: #4e4d4d;
+}
+
+
+.like-button p {
+    color: #fff;
+    font-size: 16px;
+    margin-left: -10px;
+    padding-right: 20px;
+    border-right:1px solid #AAAAAA;
+}
+
+.dislike{
+    background-color: #3a3a3a;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+.dislike:hover{
+    background-color: #4e4d4d;
+}
+
+.dislike svg{
+    transform: rotate(180deg);
+}
+
+.share{
+    margin-left: 10px;
+    background-color: #3a3a3a;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #eee;
+    font-size: 16px;
+}
+
+.share svg{
+    margin-left: -8px;
+    margin-right: -15px;
+}
+
+.share p{
+    margin-right: 14px;
+}
+
+.share:hover{
+    background-color: #4e4d4d;
+}
+
+.three-dots{
+    background-color: #3a3a3a;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 40px;
+}
+
+.three-dots:hover{
+    background-color: #4e4d4d;
+}
+
+.channel-description{
+    margin-top: 10px;
+    background-color: #3a3a3a;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.channel-description:hover{
+    background-color: #535353;
+}
+
+.comments{
+    margin-top: 30px;
+}
+
+.comments-details{
+    font-size: 18px;
+    color: #eee;
+}
+
+.channel-container-wrap{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #eee;
+}
+
+.icon-channel{
+   
+    align-self: flex-start;
+}
+
+.icon-channel img{
+    width: 40px;
+    border-radius: 40px;
+
+}
+
+
+
+
+.name-channer{
+    font-size: 14px;
+}
+
+.comment-channel{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.channel-like{
+    display: flex;
+    align-items: center;
+   
+}
+
+.channel-like p{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: -15px;
+} 
+
+
+.channel-like {
+    cursor: pointer;
+}
+
+.channel-dislike{
+    cursor: pointer;
+}
+
+.reply{
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ------------------------right-section-------------------------------------------- */
+
+
+
+
+.right-section{
+    /* border: 1px solid red; */
+    margin-left: 25px;
+    width: 400px;
+   
+}
+
+
+/* #video-main{
+} */
+
+.scrollbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.scrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.suggestion {
+    height: 40px;
+    font-size: 14px;
+    background-color: #222222;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 8px 18px;
+    min-width:fit-content;
+}
+
+.suggestion:hover{
+    background-color:#eee ;
+    color: #222222;
+}
+
+.video-card{
+    display: flex;
+    align-items:start;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
+
+.video{
+    margin-right: 8px;
+}
+
+.video iframe{
+    border-radius: 5px;
+}
+
+.bottom-item-1{
+    margin-right: 10px;
+    color: #fff;
+}
+
+.video-details{
+    max-height:41px;
+    overflow:hidden;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.channel-name{
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+.views{
+    font-size: 12px;
+    color: #AAAAAA;
+}
