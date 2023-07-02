@@ -2,12 +2,14 @@ let BASE_URL = "https://www.googleapis.com/youtube/v3";
 let API_KEY = "AIzaSyDReWaxB78a7e3FGjLuvy984T-rgox9hyE";
 
 
+
 const videoContainer = document.getElementById("video-main");
 const videoId = localStorage.getItem("videoId");
 videoContainer.src =  `https://www.youtube.com/embed/${videoId}`;
 
 
 async function getVideoDetails(videoId){
+    console.log("hello");
     const url = `${BASE_URL}/videos?key=${API_KEY}&part=snippet,contentDetails,statistics&id=${videoId}`;
     const response = await fetch(url);
     const data = await response.json();
@@ -89,13 +91,13 @@ async function getVideoData (videos){
     let videoData = [];
     for(let i=0;i<videos.length;i++){
         const video = videos[i];
-        videoData.push(await getVideoDetails(video.id.videoId))
+        videoData.push(await getSuggestedVideoDetails(video.id.videoId))
     }
-    renderVideo(videoData);
+    renderSuggestedVideo(videoData);
 }
 
 
-async function getVideoDetails(videoId){
+async function getSuggestedVideoDetails(videoId){
     const url = `${BASE_URL}/videos?key=${API_KEY}&part=snippet,contentDetails,statistics&id=${videoId}`;
     const response = await fetch(url);
     const data = await response.json();
@@ -138,15 +140,15 @@ function calculateViews(data){
     
 }
 
-function renderVideo(videos){
+async function renderSuggestedVideo(videos){
     const videoCard = document.getElementById("video-des");
-    const data = videos;
+    // const data = videos;
     // console.log(data);
     for(let i=0;i<videos.length;i++){
         const video = videos[i];
         const viewsCount = calculateViews(video.statistics.viewCount);
 
-        videoCard.innerHTML += ` <div class="video-card">
+        videoCard.innerHTML += `<div class="video-card">
         <div class="video">
             <iframe width="120" height="90" src="${video.snippet.thumbnails.default.url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -158,8 +160,6 @@ function renderVideo(videos){
         </div>
     </div>`
     }
-    
-    
 }
 
 
@@ -173,6 +173,9 @@ getSuggestedVideos("");
 function reload(){
     window.location.reload();
 }
+
+
+
 
 
 
