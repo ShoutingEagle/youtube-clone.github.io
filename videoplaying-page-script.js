@@ -17,12 +17,18 @@ async function getVideoDetails(videoId){
     const title = data.items[0].snippet.title;
     const Name = data.items[0].snippet.channelTitle;
     const comment = data.items[0].statistics.commentCount;
+    const views = data.items[0].statistics.viewCount;
+    const likes = data.items[0].statistics.likeCount
     const videoTitle = document.getElementById("description");
     videoTitle.innerHTML = title;
     const channelName = document.getElementById("channel-name-vpp");
     channelName.innerHTML = Name;
     const commentCount = document.getElementById("comments-details");
     commentCount.innerHTML = comment + " Comments";
+    const viewsInDes = document.getElementById("cd-views");
+    viewsInDes.innerHTML = calculateViews(views);
+    const like = document.getElementById("like");
+    like.innerHTML = calculateViews(likes);
 }
 
 getVideoDetails(videoId);
@@ -173,11 +179,5 @@ getSuggestedVideos("");
 function reload(){
     window.location.reload();
 }
-
-
-
-
-
-
 
 
